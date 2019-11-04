@@ -1,0 +1,5 @@
+{
+  "test1": {"name": "admin", "password": "admin"},
+  "test2": {"name": "jack", "password": "123456"},
+  "test3": {"name": "tom", "password": "123456"}
+}
