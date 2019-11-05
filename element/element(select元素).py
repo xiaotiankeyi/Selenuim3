@@ -42,7 +42,7 @@ time.sleep(1)
 s = driver.find_element_by_css_selector("#nr")
 Select(s).select_by_value('50')
 
-# 二次定位
+# 二次定位方式
 time.sleep(1)
 driver.find_element_by_id("nr").find_element_by_xpath("//option[@value='20']").click()
 
