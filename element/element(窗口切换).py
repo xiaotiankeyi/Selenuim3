@@ -31,7 +31,7 @@ try:
     sleep(2)
 
     """获取所有窗口句柄"""
-    all_windows = driver.window_handles
+    all_windows = driver.window_handles     #(可冷特_晕斗_含的)
     print(all_windows)
 
     """切换窗口"""

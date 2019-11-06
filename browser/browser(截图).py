@@ -23,10 +23,11 @@ try:
     #登录失败
     # response = driver.find_element(By.ID,"invalidlogin").text
     # print(response)
-
+    el = driver.find_element_by_xpath("//table[@cellpadding='2']/tbody/tr[4]/td[4]")
+    print(el)
     # tag = driver.find_element_by_css_selector("span[class='copyright']").is_displayed()
-    tag = driver.find_elements_by_css_selector("[class='copyright']")
-    print(tag[0].text)
+    # tag = driver.find_elements_by_css_selector("[class='copyright']")
+    # print(tag[0].text)
     # for i in tag:
     #     print(i.text)
 
@@ -34,8 +35,8 @@ try:
     print(find_digit)
 
     """截图"""
-    # driver.get_screenshot_as_file(r"C:/Users/admin/PycharmProjects/selenuim3/browser/error.png")
-    # driver.get_screenshot_as_file(os.getcwd() + "error.png")
+    driver.get_screenshot_as_file(r"C:/Users/admin/PycharmProjects/selenuim3/browser/error.png")
+    driver.get_screenshot_as_file(os.getcwd() + "error.png")
 
 except NoSuchElementException as e:
     print(e)
