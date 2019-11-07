@@ -35,6 +35,7 @@ def login_succeed(ip, browser):
         """截图"""
         driver.save_screenshot(filename='loginSucceed.png')
 
+
     except NoSuchElementException as e:
         print(e)
 
@@ -47,11 +48,12 @@ if __name__ == "__main__":
 
     lists = {'http://127.0.0.1:5556/wd/hub': 'chrome',
              'http://127.0.0.1:5557/wd/hub': 'firefox', }
-
     all = []
     for ip, browser in lists.items():
+
         t = multiprocessing.Process(target=login_succeed, args=(ip, browser))
         all.append(t)
+
 
     for i in range(len(lists)):
         all[i].start()
