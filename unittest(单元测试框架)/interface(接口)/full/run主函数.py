@@ -4,7 +4,7 @@ from RequestsWay import RunMain
 
 import unittest
 
-class apitext(unittest.TestCase):
+class Testapitext(unittest.TestCase):
     # def __init__(self):
     #     self.data = HandleExcel()
 

@@ -17,3 +17,9 @@ def text_write():
     sheet_copy.write(1, 9, '写入测试内容')    #在某一单元格写入数据
 
     data_copy.save(file_dir)       #保存
+
+import json
+
+with open(file='' 'r') as f:
+    data = json.load(f.read())
+    print(data[""])
