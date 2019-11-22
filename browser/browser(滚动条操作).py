@@ -27,3 +27,7 @@ except NoSuchElementException as e:
 
 finally:
     driver.quit()
+
+#通过js操作元素
+js = 'document.getElementById("元素").click()'
+driver.execute_script(js)
