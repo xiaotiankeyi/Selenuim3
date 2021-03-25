@@ -3,9 +3,9 @@ import unittest
 class Publicclass(unittest.TestCase):
 
     @classmethod
-    def setUpClass(cls) -> None:
+    def setUpClass(cls):
         print('test start.....')
 
     @classmethod
-    def tearDownClass(cls) -> None:
+    def tearDownClass(cls):
         print('test end quit.......')

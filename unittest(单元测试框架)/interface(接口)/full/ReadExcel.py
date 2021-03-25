@@ -7,7 +7,8 @@ from xlutils.copy import copy
 
 class HandleExcel():
     """封装操作excel的方法"""
-    file_dir = r"C:\Users\admin\Desktop\showdata.xlsx"
+    file_dir = r"C:/Users/jack/PycharmProjects/Selenuim3/unittest(单元测试框架)/interface(接口)/full/test_api.xlsx"
+    new_file = r"C:/Users/jack/PycharmProjects/Selenuim3/unittest(单元测试框架)/interface(接口)/full/test_api_result.xlsx"
 
     def __init__(self, file=file_dir, sheet_id=0):
         self.file = file
@@ -37,47 +38,51 @@ class HandleExcel():
         data_copy = copy(data)
         sheet = data_copy.get_sheet(0)
         sheet.write(row, col, value)
-        data_copy.save(self.file_dir)
-
-    # 封装excel的列名常量
-    def get_caseseq(self):
-        """获取caseSeq用例序号"""
-        caseSeq = 0
-        return caseSeq
+        data_copy.save(self.new_file)       #创建新的表
 
     def get_apiName(self):
         """获取apiName用例名称"""
-        apiName = 1
+        apiName = 0
         return apiName
 
-    def get_url(self):
+    def get_host(self):
         """获取url"""
-        url = 2
-        return url
+        host = 1
+        return host
+
+    def get_path(self):
+        """获取method请求方式"""
+        path = 2
+        return path
 
     def get_method(self):
-        """获取method请求方式"""
-        method = 4
+        """获取params请求参数"""
+        method = 3
         return method
 
-    def get_params(self):
-        """获取params请求参数"""
-        params = 6
-        return params
+    def get_opsions(self):
+        """获取优先级"""
+        opsions = 4
+        return opsions
 
-    def get_verifyID(self):
-        """获取expectValue断言ID"""
-        expect = 7
-        return expect
+    def get_database(self):
+        """获取请求数据"""
+        re_data = 5
+        return re_data
 
-    def get_verifyName(self):
-        """获取expectValue断言name"""
-        expect = 8
-        return expect
+    def get_response_field(self):
+        """获取响应字段"""
+        response = 6
+        return response
+
+    def get_respones_result(self):
+        "获取预期结果"
+        result = 7
+        return result
 
     def get_resultvalue(self):
         """获取要写入数据的单元格"""
-        expect = 9
+        expect = 8
         return expect
 
 
@@ -88,4 +93,4 @@ if __name__ == '__main__':
     test = HandleExcel()
     print(test.get_data())
     print(test.get_rows())
-    print(test.get_value(0, 8))
+    print(test.get_value(0, 6))

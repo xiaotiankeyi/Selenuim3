@@ -5,7 +5,7 @@ import unittest
 
 
 class Testaddition(unittest.TestCase):
-    def setUp(self) -> None:
+    def setUp(self):
         print('test start')
 
     def test_case(self):

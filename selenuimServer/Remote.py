@@ -6,9 +6,7 @@ from time import sleep
 import os, multiprocessing
 from selenium.webdriver import Remote
 
-'''
-grid启动不同的浏览器来执行测试用例
-'''
+#grid启动不同的浏览器来执行测试用例
 
 
 def login_succeed(ip, browser):
