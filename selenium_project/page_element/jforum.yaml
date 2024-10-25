@@ -1,0 +1,12 @@
+登录: "id==login"
+会员名称: "name==username"
+登录密码: "name==password"
+提交登入: "name==login"
+进入版块: "link_text==Test Forum"
+进入帖子: "class==topictitle"
+进入回复文章页: "css_selector==body > table > tbody > tr:nth-child(2) > td >\
+                table:nth-child(4) > tbody > tr > td > table:nth-child(2) >\
+                  tbody > tr > td:nth-child(1) > a > img"
+输入回复内容: "name==message"
+提交回复内容: "id==btnSubmit"
+注销: "id==logout"
