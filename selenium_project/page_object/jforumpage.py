@@ -44,8 +44,8 @@ class jforumPage(WebPage):
         sleep()
 
     def click_Reply_article(self):
-        """点击回复帖子"""
-        self.is_not_element_click(search['进入回复文章页'])
+        """点击回复帖子按钮"""
+        self.is_click(search['进入回复文章页'])
         sleep()
 
     def input_article_content(self, content):

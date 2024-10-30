@@ -7,7 +7,7 @@ selenium基类
 import os
 import sys
 sys.path.append(os.path.join(os.getcwd(), "selenium_project"))
-
+import random
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
@@ -76,7 +76,7 @@ class WebPage(object):
     def is_not_element_click(self, locator):
         """点击,不指定元素的点击"""
         elements = self.find_elements(locator)
-        elements_to_click = elements[0]     # 根据索引获取选择不同的元素
+        elements_to_click = elements[random.randint(0, len(elements))]     # 根据索引获取选择不同的元素
         elements_to_click.click()
         sleep()
         log.info("点击元素:{}".format(elements_to_click))

@@ -3,12 +3,12 @@
 import os
 import sys
 sys.path.append(os.path.join(os.getcwd(), "selenium_project"))
-import re
+import random
 import pytest
 from utils.logger import log
 from common.readconfig import ini
 from page_object.jforumpage import jforumPage
-
+from config.conf import cm
 
 class Testjforum:
     @pytest.fixture(scope='module', autouse=True)
@@ -25,6 +25,7 @@ class Testjforum:
         jforum.input_password("123456")
         jforum.click_submit_login()
         log.info("登录成功....")
+        # assert drivers.title == 'Example Domain'
 
     def test_002(self, drivers):
         """进入板块回复帖子"""
@@ -32,7 +33,9 @@ class Testjforum:
         jforum.click_plate()
         jforum.click_article()
         jforum.click_Reply_article()
-        jforum.input_article_content("通过selenium ui自动化框架回复内容....")
+        content = ''.join(i for i in random.sample(\
+            'zyxwvutsrqponmlkjihgfedcbaABCDEFGHIJKLMNOPQRSTUVWX', random.randint(10, 30)))
+        jforum.input_article_content(f"{content}")
         jforum.click_article_content()
         log.info("回复帖子成功....")
 
@@ -44,5 +47,5 @@ class Testjforum:
 
 if __name__ == '__main__':
     test_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "test_jforum.py")
-    pytest.main([test_file, "-vs"])
+    pytest.main([test_file, "-vs", f"--html={cm.REPORT_FILE}/report.html"])
 

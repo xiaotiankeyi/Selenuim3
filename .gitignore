@@ -142,5 +142,4 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 selenium_project/logs/*
-selenium_project/report/*
 !selenium_project/report/.gitkeep

@@ -15,7 +15,9 @@ class ConfigManager(object):
     ELEMENT_PATH = os.path.join(BASE_DIR, 'page_element')
 
     # 报告文件
-    REPORT_FILE = os.path.join(BASE_DIR, 'report', 'report.html')
+    REPORT_FILE = os.path.join(BASE_DIR, 'report/html', 'report.html')
+
+    failed_img = os.path.join(BASE_DIR, 'report', 'failed_img')
 
     # 元素定位的类型
     LOCATE_MODE = {
